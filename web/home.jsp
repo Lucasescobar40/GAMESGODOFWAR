@@ -5,6 +5,12 @@
 --%>
 
 <%@include file="session/verify.jsp" %>
+
+<%@page import="model.User" %>
+<%
+    User u = (User)session.getAttribute("userSession");
+%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,11 +19,13 @@
         <title>Game</title>
     </head>
     <body>
-        <button type="button" onclick=window.location.href= "session/logout.jsp">Logout</button>
-        <h1><img src="img/PS4GOD.png" alt="PS4GOD.png" width="500"/>
-         <%=
-                session.getAttribute("userSession")
-             %>
-        </h1>
+        <p>
+            <button type="button" onclick=window.location.href="session/logout.jsp">Logout</button>
+            Bem vindo <%= u.getUserName() %>!
+        </p>
+        <main>
+            <button onclick="window.location.href='cadastro.jsp'">Cadastrar</button>
+            <button onclick="window.location.href='lista.jsp'">Listar</button>
+        </main>
     </body>
 </html>

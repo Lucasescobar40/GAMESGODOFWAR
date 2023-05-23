@@ -18,18 +18,32 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>CONSOLES E ACESSÓRIOS</title>
+        <title>Game</title>
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="icon" href="img/logotipo.png"/>
+        <style>
+            html{
+                text-align: center;
+            }
+            input{
+                border-radius: 30px;
+            }
+            h1{
+                color: red;
+                font-family: cursive,verdana;
+            }
+        </style>
     </head>
     <body>
         <form action="login_controller" method="post">
-            <img src="img/video.png" alt="video.png" width="550"/>
+            <h1>ESCOBAR GAMES</h1>
             <br>
-            <input type="text" name="user" id="user" class="fields" placeholder="Produto" required>
+            <img src="https://63296.cdn.simplo7.net/static/63296/sku/loja-quadro-videogame--p-1618109226728.png" width="400"/>
+            <br>
+            <input type="text" name="user" id="user" class="fields" placeholder="Nome de usuário" required>
             <br><br>
             
-            <input type="password" name="pass" id="pass" class="fields" placeholder="Valor Do Console" required>
+            <input type="password" name="pass" id="pass" class="fields" placeholder="Senha" required>
             <br><br>
             
             <input type="submit" value="Entrar">
